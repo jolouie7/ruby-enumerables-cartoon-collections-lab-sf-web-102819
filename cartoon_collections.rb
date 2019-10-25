@@ -19,8 +19,14 @@ def find_the_cheese(arr)
   # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
   if arr.include?(cheese_types)
-    result = arr.reduce do |memo, word|
-      
+    cheese_types.each do |ele1|
+      arr.each do |ele2|
+        if ele1 == ele2
+          return ele2
+        end 
+      end 
     end 
+  else 
+    return nil
   end 
 end
